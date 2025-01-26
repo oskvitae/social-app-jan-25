@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  host: one
+  date: 2025-01-26 18:03:38
+  location: MyString
+  price: 1
+  type: 
+
+two:
+  name: MyString
+  description: MyText
+  host: two
+  date: 2025-01-26 18:03:38
+  location: MyString
+  price: 1
+  type: 
