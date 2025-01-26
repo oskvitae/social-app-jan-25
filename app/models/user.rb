@@ -17,4 +17,16 @@ class User < ApplicationRecord
   # Interests
   has_many :user_interests
   has_many :interests, through: :user_interests
+
+  # events
+  has_many :hosted_events, class_name: "Event", foreign_key: "host_id"
+  has_many :event_attendances
+  has_many :attended_events, through: :event_attendances, source: :event
+
+  # Posts
+  has_many :posts
+
+  # Likes
+  has_many :likes
+  has_many :liked_posts, through: :likes, source: :post
 end
