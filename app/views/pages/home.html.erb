@@ -1,2 +1,5 @@
-<h1>Welcome Home</h1>
-<%= current_user.username %>
+<h1>NEW WAVE SOCIAL</h1>
+
+<% if user_signed_in? %>
+  <p>Welcome @<%= current_user.username %></p>
+<% end %>
