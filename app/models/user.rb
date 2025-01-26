@@ -13,4 +13,8 @@ class User < ApplicationRecord
   has_many :events, through: :event_attendances
   has_many :follower_relationships, class_name: "Follow", foreign_key: "source_id"
   has_many :follower_relationships, class_name: "Follow", foreign_key: "target_id"
+
+  # Interests
+  has_many :user_interests
+  has_many :interests, through: :user_interests
 end
