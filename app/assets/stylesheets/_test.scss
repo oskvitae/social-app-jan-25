@@ -1,5 +1,6 @@
 // CSCC VARIABLES
 $sidebar-bg: #343a40; // Sidebar background color
+$sidebar-text-color: white;
 $active-text-color: #28a745; // Green for active links
 $active-bg-color: rgba(255, 255, 255, 0.1); // Light background for active items
 
@@ -9,31 +10,50 @@ $active-bg-color: rgba(255, 255, 255, 0.1); // Light background for active items
   background-color: $sidebar-bg;
   position: sticky;
   top: 0;
+  // border-radius: 0 16px 16px 0 ;
 
 
   .nav-link {
+      color: $sidebar-text-color !important;
+      transition: all 0.3s ease-in-out;
       &:hover {
           background: rgba(255, 255, 255, 0.1);
+          color: #bec2c6 !important;
       }
+      border-radius: 8px ;
+      // text-align: center;
   }
+
+  .nav-item {
+    margin: 4px 0;
+  }
+
+  // ACTIVE LINK ITEM STYLING
+  .nav-item.active {
+    .nav-link {
+        color: $active-text-color !important; // Green text
+        background-color: $active-bg-color; // Light background
+    }
 }
 
-// Content padding
+}
+
+
 main {
     background: #f8f9fa;
-    min-height: 100vh; // Full height of the viewport
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center; // Center vertically
-    align-items: center; // Center horizontally
-    text-align: center; // Ensure text is centered
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     padding: 2rem;
 }
 
 
 .tall-container {
   height: 800px;
-  width: 80%;
+  width: 100%;
   margin: 32px 0;
 }
 .coral {
@@ -43,6 +63,10 @@ main {
 .blue {
   background-color: rgb(57, 171, 165);
 }
+
+
+// ACTIVE NAV ITEMS STYLING
+
 
 //  NAVBAR MOBILE
 @media (max-width: 767px) {
