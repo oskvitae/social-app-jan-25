@@ -1,0 +1,53 @@
+// CSCC VARIABLES
+$sidebar-bg: #343a40; // Sidebar background color
+$active-text-color: #28a745; // Green for active links
+$active-bg-color: rgba(255, 255, 255, 0.1); // Light background for active items
+
+
+#sidebar {
+  height: 100vh;
+  background-color: $sidebar-bg;
+  position: sticky;
+  top: 0;
+
+
+  .nav-link {
+      &:hover {
+          background: rgba(255, 255, 255, 0.1);
+      }
+  }
+}
+
+// Content padding
+main {
+    background: #f8f9fa;
+    min-height: 100vh; // Full height of the viewport
+    display: flex;
+    flex-direction: column;
+    justify-content: center; // Center vertically
+    align-items: center; // Center horizontally
+    text-align: center; // Ensure text is centered
+    padding: 2rem;
+}
+
+
+.tall-container {
+  height: 800px;
+  width: 80%;
+  margin: 32px 0;
+}
+.coral {
+  background-color: coral;
+}
+
+.blue {
+  background-color: rgb(57, 171, 165);
+}
+
+//  NAVBAR MOBILE
+@media (max-width: 767px) {
+  #sidebar {
+      position: relative;
+      height: auto;
+  }
+}
